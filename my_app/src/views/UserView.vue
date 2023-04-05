@@ -2,7 +2,8 @@
     <div>
         <h1>User</h1>
         <p>{{ messages }}</p>
-        <router-view></router-view>
+        <p>{{ $route.params.id }}</p>
+        <p>{{ $route.params.name }}</p>
     </div>
 </template>
 

@@ -16,19 +16,13 @@ const routes: Array<RouteConfig> = [
   {
     path: '/contact',
     name: 'contact',
-    component: ContactView
+    component: ContactView,
+    redirect: '/',
   },
   {
-    path: '/user',
-    name: 'user',
+    path: '/user/:id/:name',
+    name: 'User',
     component: UserView,
-    children: [
-      {
-        path: 'detail',
-      name: 'detail',
-      component: Details,
-    }
-    ]
   },
   {
     path: '/about',
