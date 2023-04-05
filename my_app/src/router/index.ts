@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
+import UserView from '../views/UserView.vue'
+import Details from '../views/Details.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +17,18 @@ const routes: Array<RouteConfig> = [
     path: '/contact',
     name: 'contact',
     component: ContactView
+  },
+  {
+    path: '/user',
+    name: 'user',
+    component: UserView,
+    children: [
+      {
+        path: 'detail',
+      name: 'detail',
+      component: Details,
+    }
+    ]
   },
   {
     path: '/about',
